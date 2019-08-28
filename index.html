@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>TS - BookList</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-center">
+    <h1 class="display-4 alert-link text-center ">
+      <span class="icon-books text-danger"></span>Mi
+      <span class="text-success">Libreria Personal</span>
+    </h1>
+  </nav>
+  <div class="container mt-4">
+    <form id="book-form">
+      <div class="from-group">
+        <label for="title">Titulo</label>
+        <input type="text" id="title" class="form-control" require />
+      </div>
+      <div class="from-group">
+        <label for="author">Autor</label>
+        <input type="text" id="author" class="form-control" require />
+      </div>
+      <div class="from-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn" class="form-control" require />
+      </div>
+      <div class="from-group">
+        <label for="releaseDate">Fecha</label>
+        <input type="date" id="releaseDate" class="form-control" require />
+      </div>
+      <div class="from-group">
+        <label for="price">Precio</label>
+        <input type="text" id="price" class="form-control" require />
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary btn-lg btn-block">
+        <span class="icon-plus"></span> Agregar
+      </button>
+    </form>
+    <table class="table table-stripped mt-5">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>ISBN</th>
+          <th>Fecha</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="bookList"></tbody>
+    </table>
+  </div>
+
+  <script src="./src/main.ts"></script>
+</body>
+
+</html>
